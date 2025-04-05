@@ -1,0 +1,120 @@
+folder('POC') {
+    displayName('POC')
+}
+folder('POC/CI-Checks') {
+    displayName('CI-Checks')
+}
+folder('POC/CI-Checks/Shared-Library') {
+    displayName('Declarative')
+}
+folder('POC/CI-Checks/Shared-Library/React') {
+    displayName('React')
+
+pipelineJob('POC/CI-Checks/Shared-Library/React/Dependency-scanning') {
+    description("Pipeline job for react dependency scanning")
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/snaatak-Zero-Downtime-Crew/jenkins.git')
+                        credentials('git-cred') 
+                    }
+                    branch('*/main') 
+                }
+            }
+            scriptPath('CI/Application/Shared Library/React/Dependency scanning/Jenkinsfile')
+        }
+    }
+}
+
+pipelineJob('POC/CI-Checks/Shared-Library/React/DAST') {
+    description("Pipeline job for DAST for react")
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/snaatak-Zero-Downtime-Crew/jenkins.git')
+                        credentials('git-cred') 
+                    }
+                    branch('*/Anuj-SCRUM-216') 
+                }
+            }
+            scriptPath('Jenkinsfile')
+        }
+    }
+}
+
+pipelineJob('POC/CI-Checks/Shared-Library/React/Unit-Testing ') {
+    description("Pipeline job for react unit testing")
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/snaatak-Zero-Downtime-Crew/jenkins.git')
+                        credentials('git-cred') 
+                    }
+                    branch('*/Mohit-SCRUM-215') 
+                }
+            }
+            scriptPath('CI/Application/Shared Library/React/Unit Testing/Jenkinsfile')
+        }
+    }
+}
+
+
+pipelineJob('POC/CI-Checks/Shared-Library/React/Bugs analysis') {
+    description("Pipeline job for react bug analysis")
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/snaatak-Zero-Downtime-Crew/jenkins.git')
+                        credentials('git-cred') 
+                    }
+                    branch('*/Nikita-SCRUM-214') 
+                }
+            }
+            scriptPath('CI/Application/Shared Library/React/Bugs Analysis/Jenkinsfile')
+        }
+    }
+}
+
+  pipelineJob('POC/CI-Checks/Shared-Library/React/Static-code-analysis') {
+    description("Pipeline job for react Static-code-analysis")
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/snaatak-Zero-Downtime-Crew/jenkins.git')
+                        credentials('git-cred') 
+                    }
+                    branch('*/main') 
+                }
+            }
+            scriptPath('')
+        }
+    }
+}
+
+ pipelineJob('POC/CI-Checks/Shared-Library/React/Static-code-analysis') {
+    description("Pipeline job for react Static-code-analysis")
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/snaatak-Zero-Downtime-Crew/jenkins.git')
+                        credentials('git-cred') 
+                    }
+                    branch('*/main') 
+                }
+            }
+            scriptPath('')
+        }
+    }
+}
