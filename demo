@@ -9,9 +9,10 @@ folder('POC/CI-Checks/Shared-Library') {
 }
 folder('POC/CI-Checks/Shared-Library/React') {
     displayName('React')
+}
 
 pipelineJob('POC/CI-Checks/Shared-Library/React/Dependency-scanning') {
-    description("Pipeline job for react dependency scanning")
+    description("Pipeline job for React dependency scanning")
     definition {
         cpsScm {
             scm {
@@ -29,7 +30,7 @@ pipelineJob('POC/CI-Checks/Shared-Library/React/Dependency-scanning') {
 }
 
 pipelineJob('POC/CI-Checks/Shared-Library/React/DAST') {
-    description("Pipeline job for DAST for react")
+    description("Pipeline job for DAST for React")
     definition {
         cpsScm {
             scm {
@@ -46,8 +47,8 @@ pipelineJob('POC/CI-Checks/Shared-Library/React/DAST') {
     }
 }
 
-pipelineJob('POC/CI-Checks/Shared-Library/React/Unit-Testing ') {
-    description("Pipeline job for react unit testing")
+pipelineJob('POC/CI-Checks/Shared-Library/React/Unit-Testing') {
+    description("Pipeline job for React unit testing")
     definition {
         cpsScm {
             scm {
@@ -64,9 +65,8 @@ pipelineJob('POC/CI-Checks/Shared-Library/React/Unit-Testing ') {
     }
 }
 
-
-pipelineJob('POC/CI-Checks/Shared-Library/React/Bugs analysis') {
-    description("Pipeline job for react bug analysis")
+pipelineJob('POC/CI-Checks/Shared-Library/React/Bugs-analysis') {
+    description("Pipeline job for React bug analysis")
     definition {
         cpsScm {
             scm {
@@ -82,7 +82,3 @@ pipelineJob('POC/CI-Checks/Shared-Library/React/Bugs analysis') {
         }
     }
 }
-
-
-
-
