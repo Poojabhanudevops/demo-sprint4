@@ -83,38 +83,6 @@ pipelineJob('POC/CI-Checks/Shared-Library/React/Bugs analysis') {
     }
 }
 
-  pipelineJob('POC/CI-Checks/Shared-Library/React/Static-code-analysis') {
-    description("Pipeline job for react Static-code-analysis")
-    definition {
-        cpsScm {
-            scm {
-                git {
-                    remote {
-                        url('https://github.com/snaatak-Zero-Downtime-Crew/jenkins.git')
-                        credentials('git-cred') 
-                    }
-                    branch('*/main') 
-                }
-            }
-            scriptPath('')
-        }
-    }
-}
 
- pipelineJob('POC/CI-Checks/Shared-Library/React/Static-code-analysis') {
-    description("Pipeline job for react Static-code-analysis")
-    definition {
-        cpsScm {
-            scm {
-                git {
-                    remote {
-                        url('https://github.com/snaatak-Zero-Downtime-Crew/jenkins.git')
-                        credentials('git-cred') 
-                    }
-                    branch('*/main') 
-                }
-            }
-            scriptPath('')
-        }
-    }
-}
+
+
